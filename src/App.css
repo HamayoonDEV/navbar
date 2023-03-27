@@ -1,0 +1,60 @@
+.app{
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+}
+.app h1{
+  color: white;
+}
+.app .navbar .ulnavbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.app .hambargar{
+  display: none;
+}
+@media screen and (max-width : 1024px) {
+  .app .navbar .ulnavbar{
+    display: none;
+  }
+  .app .hambargar{
+    display: initial;
+  }
+  .mobnavbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 25rem;
+    top: 10rem;
+    transition: 0.3s;
+  }
+  .mobnavbar.active{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: -10rem;
+      top: 10rem;
+      transition: 0.3s;
+  }
+  .mobnavbar .mobul li{
+      color: white;
+      list-style-type: none;
+      padding: 1rem 0;
+      font-size: 2rem;
+      
+  }
+}
+.app .navbar .ulnavbar li{
+  color: white;
+  list-style-type: none;
+  padding: 0 1rem;
+}
+.app .hambargar{
+  cursor: pointer;
+}
